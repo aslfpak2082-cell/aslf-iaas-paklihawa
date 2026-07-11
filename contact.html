@@ -11,39 +11,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
-script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-
-emailjs.init("7JR1TuK1KpFPgXE1d");
-
-document.getElementById("contact-form").addEventListener("submit", function(event){
-
-event.preventDefault();
-
-emailjs.sendForm(
-"service_qeje8tj",
-"template_thoc4wc",
-this
-)
-
-.then(function(){
-
-alert("✅ Message sent successfully!");
-
-document.getElementById("contact-form").reset();
-
-},
-
-function(error){
-
-alert("❌ Failed to send message.");
-
-console.log(error);
-
-});
-
-});
 
 <body>
 
@@ -51,14 +18,11 @@ console.log(error);
 
 <div class="logo">
 
-<img src="Logo.jpg" alt="Logo">
+<img src="images/Logo.jpg" alt="Logo">
 
 <div>
-
 <h2>ASLF IAAS Paklihawa</h2>
-
 <p>Agriculture Student's Liaison Forum</p>
-
 </div>
 
 </div>
@@ -66,15 +30,10 @@ console.log(error);
 <nav>
 
 <a href="index.html">Home</a>
-
 <a href="about.html">About Us</a>
-
 <a href="team.html">Our Team</a>
-
 <a href="activities.html">Activities</a>
-
 <a href="resources.html">Resources</a>
-
 <a href="contact.html">Contact Us</a>
 
 </nav>
@@ -101,9 +60,13 @@ console.log(error);
 
 <div class="social-contact">
 
-<a href="https://www.facebook.com/aslfpak" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.facebook.com/aslfpak" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
 
-<a href="https://www.instagram.com/aslf_iaas_paklihawa" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.instagram.com/aslf_iaas_paklihawa" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
 
 </div>
 
@@ -111,36 +74,38 @@ console.log(error);
 
 <div class="contact-form">
 
-<form>
+<form id="contact-form">
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" name="from_name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email" required>
+<input type="email" name="reply_to" placeholder="Your Email" required>
 
-<input type="text" placeholder="Subject">
+<input type="text" name="subject" placeholder="Subject" required>
 
-<textarea rows="6" placeholder="Your Message"></textarea>
+<textarea name="message" rows="6" placeholder="Your Message" required></textarea>
 
 <button type="submit">Send Message</button>
 
 </form>
-<section class="map-section">
 
-    <h2>Our Location</h2>
+</div>
 
-    <iframe
-        src="https://www.google.com/maps?q=IAAS%20Paklihawa%20Campus&output=embed"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
+</div>
 
 </section>
-</div>
 
-</div>
+<section class="map-section">
+
+<h2>Our Location</h2>
+
+<iframe
+src="https://www.google.com/maps?q=IAAS%20Paklihawa%20Campus&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
 
 </section>
 
@@ -148,51 +113,91 @@ console.log(error);
 
 <div class="footer-container">
 
-    <div class="footer-left">
+<div class="footer-left">
 
-        <h3>ASLF IAAS Paklihawa</h3>
+<h3>ASLF IAAS Paklihawa</h3>
 
-        <p>Agriculture Student's Liaison Forum</p>
+<p>Agriculture Student's Liaison Forum</p>
 
-        <div class="social-icons">
+<div class="social-icons">
 
-            <a href="https://www.facebook.com/aslfpak" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
+<a href="https://www.facebook.com/aslfpak" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
 
-            <a href="https://www.instagram.com/aslf_iaas_paklihawa?igsh=MWdja2VudDV3a3N4eA==" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
+<a href="https://www.instagram.com/aslf_iaas_paklihawa" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
 
-            <a href="mailto:aslfpak2082@gmail.com">
-                <i class="fas fa-envelope"></i>
-            </a>
+<a href="mailto:aslfpak2082@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
-    <div class="footer-right">
+<div class="footer-right">
 
-        <img src="images/murari.jpg" alt="Murari Yadav">
+<img src="images/murari.jpg" alt="Murari Yadav">
 
-        <h4>Designed & Developed by</h4>
+<h4>Designed & Developed by</h4>
 
-        <h3>Murari Yadav</h3>
+<h3>Murari Yadav</h3>
 
-        <p>📞 +977-9800871361</p>
+<p>📞 +977-9800871361</p>
 
-    </div>
+</div>
 
 </div>
 
 <hr>
 
 <p class="copyright">
+
 © 2026 ASLF IAAS Paklihawa. All Rights Reserved.
+
 </p>
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init({
+publicKey:"7JR1TuK1KpFPgXE1d"
+});
+
+document.getElementById("contact-form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+
+"service_qeje8tj",
+
+"template_thoc4wc",
+
+this
+
+).then(function(){
+
+alert("✅ Message Sent Successfully!");
+
+document.getElementById("contact-form").reset();
+
+}).catch(function(error){
+
+alert("❌ Failed to Send Message");
+
+console.log(error);
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
