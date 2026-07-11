@@ -174,13 +174,9 @@ document.getElementById("contact-form").addEventListener("submit",function(e){
 e.preventDefault();
 
 emailjs.sendForm(
-
 "service_qeje8tj",
-
 "template_thoc4wc",
-
 this
-
 ).then(function(){
 
 alert("✅ Message Sent Successfully!");
@@ -189,13 +185,13 @@ document.getElementById("contact-form").reset();
 
 }).catch(function(error){
 
-alert("❌ Failed to Send Message");
-
 console.log(error);
 
-});
+alert(error.text || JSON.stringify(error));
 
 });
+});
+
 
 </script>
 
