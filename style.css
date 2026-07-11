@@ -235,3 +235,162 @@ nav a{
     margin-bottom:10px;
 }
 }
+/* ===========================
+   Statistics Section
+=========================== */
+
+.statistics{
+    background:#0b6b2e;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.statistics h2{
+    color:#fff;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.stats-subtitle{
+    color:#e8f5e9;
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+.stats-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.stat-box{
+    background:#fff;
+    width:230px;
+    padding:35px 20px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+}
+
+.stat-box h1{
+    color:#0b6b2e;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    font-size:18px;
+    font-weight:bold;
+    color:#444;
+}
+
+@media(max-width:768px){
+
+.stats-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.stat-box{
+    width:90%;
+}
+
+}
+.map-section{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.map-section h2{
+    color:#0b6b2e;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.map-section iframe{
+    width:100%;
+    height:450px;
+    border:0;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    /* ===========================
+Latest News & Events
+=========================== */
+
+.news-events{
+    padding:80px 8%;
+    background:#f8f9fa;
+    text-align:center;
+}
+
+.news-events h2{
+    color:#0b6b2e;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.news-container{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+.news-card{
+    width:380px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-10px);
+}
+
+.news-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.news-content{
+    padding:20px;
+    text-align:left;
+}
+
+.news-content span{
+    color:#0b6b2e;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.news-content h3{
+    margin:15px 0;
+    color:#222;
+}
+
+.news-content p{
+    color:#666;
+    line-height:1.6;
+}
+
+.news-content a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    background:#0b6b2e;
+    color:white;
+    padding:10px 20px;
+    border-radius:6px;
+}
+
+.news-content a:hover{
+    background:#12863d;
+}

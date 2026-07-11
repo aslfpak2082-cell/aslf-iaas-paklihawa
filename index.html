@@ -36,101 +36,102 @@ Empowering Agriculture Students through Leadership,
 Innovation and Professional Development.
 </p>
 
-<a href="#" class="btn">Join Us</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSezt4uH4eRGH11wOMYxOSoij7oH3hFr5XUNqTaGbLJTOidsgA/viewform?usp=header" target="_blank" class="btn">
+    Join Us
+</a>
 </section>
 
 <section id="about" class="section">
+<!-- Statistics Section -->
+<section class="statistics">
 
-<h2>About Us</h2>
+    <h2>Our Impact</h2>
+    <p class="stats-subtitle">
+        ASLF IAAS Paklihawa at a glance
+    </p>
 
-<h3>Background</h3>
+    <div class="stats-container">
 
-<p>
-Agriculture Student's Liaison Forum (ASLF) is a student-led organization
-dedicated to leadership, communication and professional development.
-</p>
+        <div class="stat-box">
+            <h1 class="counter" data-target="250">0</h1>
+            <p>Members</p>
+        </div>
 
-<h3>History</h3>
+        <div class="stat-box">
+            <h1 class="counter" data-target="35">0</h1>
+            <p>Events Organized</p>
+        </div>
 
-<p>
-Write the history of ASLF IAAS Paklihawa here.
-</p>
+        <div class="stat-box">
+            <h1 class="counter" data-target="12">0</h1>
+            <p>Executive Members</p>
+        </div>
 
-<h3>Mission</h3>
+        <div class="stat-box">
+            <h1 class="counter" data-target="5">0</h1>
+            <p>Years of Excellence</p>
+        </div>
 
-<p>
-To develop future agricultural leaders through learning,
-leadership and service.
-</p>
-
-<h3>Vision</h3>
-
-<p>
-To become Nepal's leading agriculture student organization.
-</p>
-
-<h3>President's Message</h3>
-
-<p>
-Welcome to ASLF IAAS Paklihawa.
-Together we grow, lead and inspire.
-</p>
-
-<h3>Membership</h3>
-
-<p>
-Every IAAS Paklihawa student can become an ASLF member.
-</p>
+    </div>
 
 </section>
+<!-- Latest News & Upcoming Events -->
 
-<section id="team" class="section">
+<section class="news-events">
 
-<
-</div>
+    <h2>Latest News & Upcoming Events</h2>
+<div class="cards"></div>
+    <div class="news-container">
+
+        <!-- Latest News -->
+
+        <div class="news-card">
+
+            <img src="images/news1.jpg" alt="News">
+
+            <div class="news-content">
+
+                <span>📅 July 20, 2026</span>
+
+                <h3>Leadership Training Successfully Completed</h3>
+
+                <p>
+                    ASLF IAAS Paklihawa successfully organized a leadership
+                    training program with active participation of students.
+                </p>
+
+                <a href="#">Read More</a>
+
+            </div>
+
+        </div>
+
+        <!-- Upcoming Event -->
+
+        <div class="news-card">
+
+            <img src="images/event1.jpg" alt="Event">
+
+            <div class="news-content">
+
+                <span>📅 August 10, 2026</span>
+
+                <h3>Upcoming Agricultural Workshop</h3>
+
+                <p>
+                    Join our upcoming agricultural workshop focusing on
+                    sustainable farming and innovation.
+                </p>
+
+                <a href="#">Register Now</a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
-
-<section id="activities" class="section">
-
-<h2>Activities</h2>
-
-<ul>
-
-<li>Training Programs</li>
-
-<li>Workshops</li>
-
-<li>Field Visits</li>
-
-<li>Seminars</li>
-
-<li>Research Activities</li>
-
-<li>Community Services</li>
-
-</ul>
-
-</section>
-
-<section id="resources" class="section">
-
-<h2>Resources</h2>
-
-<ul>
-
-<li>Publications</li>
-
-<li>Research Papers</li>
-
-<li>Reports</li>
-
-<li>Downloads</li>
-
-<li>Gallery</li>
-
-</ul>
-
 </section>
 
 <section id="contact" class="section">
@@ -150,7 +151,20 @@ Every IAAS Paklihawa student can become an ASLF member.
 </form>
 
 </section>
+<section class="map-section">
 
+    <h2>Our Location</h2>
+
+    <iframe
+        src="https://www.google.com/maps?q=IAAS%20Paklihawa%20Campus&output=embed"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+</section>
 <footer class="footer">
 
 <div class="footer-container">
@@ -200,6 +214,59 @@ Every IAAS Paklihawa student can become an ASLF member.
 </p>
 
 </footer>
+<script>
 
+const counters = document.querySelectorAll(".counter");
+
+const startCounter = () => {
+
+    counters.forEach(counter => {
+
+        const updateCounter = () => {
+
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+
+            const increment = Math.ceil(target / 100);
+
+            if(count < target){
+
+                counter.innerText = count + increment;
+
+                setTimeout(updateCounter,20);
+
+            }else{
+
+                counter.innerText = target + "+";
+
+            }
+
+        };
+
+        updateCounter();
+
+    });
+
+};
+
+let counted = false;
+
+window.addEventListener("scroll",()=>{
+
+const section=document.querySelector(".statistics");
+
+const sectionTop=section.getBoundingClientRect().top;
+
+if(sectionTop<window.innerHeight-100 && !counted){
+
+counted=true;
+
+startCounter();
+
+}
+
+});
+
+</script>
 </body>
 </html>
