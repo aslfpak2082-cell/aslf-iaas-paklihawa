@@ -215,57 +215,6 @@ Innovation and Professional Development.
 </footer>
 <script>
 
-const counters = document.querySelectorAll(".counter");
 
-const startCounter = () => {
-
-    counters.forEach(counter => {
-
-        const updateCounter = () => {
-
-            const target = +counter.getAttribute("data-target");
-            const count = +counter.innerText;
-
-            const increment = Math.ceil(target / 100);
-
-            if(count < target){
-
-                counter.innerText = count + increment;
-
-                setTimeout(updateCounter,20);
-
-            }else{
-
-                counter.innerText = target + "+";
-
-            }
-
-        };
-
-        updateCounter();
-
-    });
-
-};
-
-let counted = false;
-
-window.addEventListener("scroll",()=>{
-
-const section=document.querySelector(".statistics");
-
-const sectionTop=section.getBoundingClientRect().top;
-
-if(sectionTop<window.innerHeight-100 && !counted){
-
-counted=true;
-
-startCounter();
-
-}
-
-});
-
-</script>
 </body>
 </html>
