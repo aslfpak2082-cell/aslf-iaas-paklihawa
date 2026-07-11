@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ASLF IAAS Paklihawa</title>
 
-<title>Contact Us | ASLF IAAS Paklihawa</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -17,7 +17,6 @@
 <header>
 
 <div class="logo">
-
 <img src="images/Logo.jpg" alt="Logo">
 
 <div>
@@ -39,6 +38,7 @@
 </nav>
 
 </header>
+
 
 <section class="contact">
 
@@ -72,15 +72,16 @@
 
 </div>
 
+
 <div class="contact-form">
 
 <form id="contact-form">
 
-<input type="text" name="from_name" placeholder="Your Name" required>
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" name="reply_to" placeholder="Your Email" required>
+<input type="email" name="email" placeholder="Your Email" required>
 
-<input type="text" name="subject" placeholder="Subject" required>
+<input type="text" name="title" placeholder="Subject" required>
 
 <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
 
@@ -93,6 +94,8 @@
 </div>
 
 </section>
+
+
 
 <section class="map-section">
 
@@ -108,6 +111,8 @@ loading="lazy">
 </iframe>
 
 </section>
+
+
 
 <footer class="footer">
 
@@ -154,12 +159,12 @@ loading="lazy">
 <hr>
 
 <p class="copyright">
-
 © 2026 ASLF IAAS Paklihawa. All Rights Reserved.
-
 </p>
 
 </footer>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -177,21 +182,25 @@ emailjs.sendForm(
 "service_qeje8tj",
 "template_thoc4wc",
 this
-).then(function(){
+)
 
-alert("✅ Message Sent Successfully!");
+.then(function(){
+
+alert("Message Sent Successfully!");
 
 document.getElementById("contact-form").reset();
 
-}).catch(function(error){
+})
+
+.catch(function(error){
 
 console.log(error);
 
-alert(error.text || JSON.stringify(error));
+alert("Failed to Send Message");
 
 });
-});
 
+});
 
 </script>
 
