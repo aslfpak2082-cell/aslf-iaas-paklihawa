@@ -11,6 +11,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
+script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("7JR1TuK1KpFPgXE1d");
+
+document.getElementById("contact-form").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+emailjs.sendForm(
+"service_qeje8tj",
+"template_thoc4wc",
+this
+)
+
+.then(function(){
+
+alert("✅ Message sent successfully!");
+
+document.getElementById("contact-form").reset();
+
+},
+
+function(error){
+
+alert("❌ Failed to send message.");
+
+console.log(error);
+
+});
+
+});
 
 <body>
 
